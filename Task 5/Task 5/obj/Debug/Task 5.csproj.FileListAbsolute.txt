@@ -1,0 +1,5 @@
+C:\Users\dell\CoVid-19\PracCourse1\Task 5\Task 5\bin\Debug\Task_5.exe
+C:\Users\dell\CoVid-19\PracCourse1\Task 5\Task 5\bin\Debug\Task_5.pdb
+C:\Users\dell\CoVid-19\PracCourse1\Task 5\Task 5\obj\Debug\Task 5.csprojAssemblyReference.cache
+C:\Users\dell\CoVid-19\PracCourse1\Task 5\Task 5\obj\Debug\Task_5.exe
+C:\Users\dell\CoVid-19\PracCourse1\Task 5\Task 5\obj\Debug\Task_5.pdb

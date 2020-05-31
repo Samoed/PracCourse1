@@ -36,63 +36,41 @@ namespace Task1
             int x = int.Parse(str[1]);
             int y = int.Parse(str[2]);
             x--;y--;
-            //Console.WriteLine($"x={x} y={y} arr={arr[x,y]}");
-            switch (t)
-            {
-                case 1:
-                    if (x < n-1 && y < m-1 && x>=0 && y>=0)
-                    {
-                        //Console.WriteLine("ok");
-                        if (Chek(t,x,y,arr)){
-                            arr[x+1, y] = 1;
-                            arr[x, y+1] = 1;
-                            arr[x+1, y+1] = 1;
-                        }
-                    }
-                    break;
-                case 2:
-                    if (x < n-1 && y < m-1 && x>=0 && y>=0)
-                    {
-                        if (Chek(t,x, y, arr))
-                        {
-                          //  Console.WriteLine("ok");
-                            arr[x, y] = 1;
-                            arr[x + 1, y] = 1;
-                            arr[x + 1, y + 1] = 1;
-                        }
-                    }
-                    break;
-                case 3:
-                    if (x < n-1 && y < m-1 && x>=0 && y>=0)
-                    {
-                        if (Chek(t,x, y, arr))
-                        {
-                            //Console.WriteLine("ok");
-                            arr[x, y] = 1;
-                            arr[x, y + 1] = 1;
-                            arr[x + 1, y + 1] = 1;
-                        }
-                    }
-                    break;
-                case 4:
-                    if (x < n-1 && y < m-1 && x>=0 && y>=0)
-                    {
-                        if (Chek(t,x, y, arr))
-                        {
-                            //Console.WriteLine("ok");
-                            arr[x, y] = 1;
-                            arr[x + 1, y] = 1;
-                            arr[x, y + 1] = 1;
-                        }
-                    }
-                    break;
-            }
-            /*for (int w = 0; w < n; ++w)
-            {
-                for (int j = 0; j < m; ++j)
-                    Console.Write(arr[w,j]+" ");
-                Console.WriteLine();
-            }*/
+			if (x < n-1 && y < m-1 && x>=0 && y>=0)
+				switch (t)
+				{
+					case 1:
+						if (Chek(t,x,y,arr)){
+							arr[x+1, y] = 1;
+							arr[x, y+1] = 1;
+							arr[x+1, y+1] = 1;
+						}
+						break;
+					case 2:						
+						if (Chek(t,x, y, arr))
+						{
+							arr[x, y] = 1;
+							arr[x + 1, y] = 1;
+							arr[x + 1, y + 1] = 1;
+						}					
+						break;
+					case 3:
+						if (Chek(t,x, y, arr))
+						{
+							arr[x, y] = 1;
+							arr[x, y + 1] = 1;
+							arr[x + 1, y + 1] = 1;
+						}
+						break;
+					case 4:
+						if (Chek(t,x, y, arr))
+						{
+							arr[x, y] = 1;
+							arr[x + 1, y] = 1;
+							arr[x, y + 1] = 1;
+						}				
+						break;
+				}
         }
 
         int ans = 0;

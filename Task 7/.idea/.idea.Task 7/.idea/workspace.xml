@@ -1,122 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1a41bdce-c7f8-4849-9c5e-5fdc0ffce999" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Task 1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/.idea/.idea.Task1/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/.idea/.idea.Task1/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/.idea/.idea.Task1/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/.idea/.idea.Task1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/.idea/.idea.Task1/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/.idea/.idea.Task1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/.idea/.idea.Task1/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/Task1.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/Task1/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/Task1/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/Task1/Task1.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/Task1/bin/Debug/Task1.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/Task1/bin/Debug/Task1.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/Task1/obj/Debug/Task1.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/Task1/obj/Debug/Task1.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/Task1/obj/Debug/Task1.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 1/Task1/obj/Debug/Task1.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/.idea/.idea.Task2/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/.idea/.idea.Task2/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/.idea/.idea.Task2/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/.idea/.idea.Task2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/.idea/.idea.Task2/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/.idea/.idea.Task2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/.idea/.idea.Task2/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/Task2.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/Task2/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/Task2/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/Task2/Task2.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/Task2/bin/Debug/Task2.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/Task2/bin/Debug/Task2.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/Task2/obj/Debug/Task2.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/Task2/obj/Debug/Task2.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/Task2/obj/Debug/Task2.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 2/Task2/obj/Debug/Task2.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/.idea/.idea.Task3/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/.idea/.idea.Task3/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/.idea/.idea.Task3/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/.idea/.idea.Task3/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/.idea/.idea.Task3/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/.idea/.idea.Task3/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/.idea/.idea.Task3/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/Task3.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/Task3/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/Task3/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/Task3/Task3.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/Task3/bin/Debug/Task3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/Task3/bin/Debug/Task3.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/Task3/obj/Debug/Task3.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/Task3/obj/Debug/Task3.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/Task3/obj/Debug/Task3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 3/Task3/obj/Debug/Task3.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 6/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 6/Task 6/bin/Debug/Task_6.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 6/Task 6/bin/Debug/Task_6.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 6/Task 6/obj/Debug/Task 6.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 6/Task 6/obj/Debug/Task 6.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 6/Task 6/obj/Debug/Task_6.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Task 6/Task 6/obj/Debug/Task_6.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/.idea/.idea.Task1/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/.idea/.idea.Task1/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/.idea/.idea.Task1/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/.idea/.idea.Task1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/.idea/.idea.Task1/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/.idea/.idea.Task1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/.idea/.idea.Task1/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/Task1.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/Task1/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/Task1/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/Task1/Task1.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/Task1/bin/Debug/Task1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/Task1/bin/Debug/Task1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/Task1/obj/Debug/Task1.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/Task1/obj/Debug/Task1.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/Task1/obj/Debug/Task1.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task1/Task1/obj/Debug/Task1.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/.idea/.idea.Task2/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/.idea/.idea.Task2/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/.idea/.idea.Task2/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/.idea/.idea.Task2/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/.idea/.idea.Task2/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/.idea/.idea.Task2/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/.idea/.idea.Task2/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/Task2.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/Task2/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/Task2/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/Task2/Task2.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/Task2/bin/Debug/Task2.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/Task2/bin/Debug/Task2.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/Task2/obj/Debug/Task2.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/Task2/obj/Debug/Task2.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/Task2/obj/Debug/Task2.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task2/Task2/obj/Debug/Task2.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/.idea/.idea.Task3/.idea/contentModel.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/.idea/.idea.Task3/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/.idea/.idea.Task3/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/.idea/.idea.Task3/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/.idea/.idea.Task3/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/.idea/.idea.Task3/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/.idea/.idea.Task3/riderModule.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/Task3.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/Task3/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/Task3/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/Task3/Task3.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/Task3/bin/Debug/Task3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/Task3/bin/Debug/Task3.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/Task3/obj/Debug/Task3.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/Task3/obj/Debug/Task3.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/Task3/obj/Debug/Task3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task3/Task3/obj/Debug/Task3.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Task 7/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Task 7/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Task 7/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Task 7/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Task 7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Task 7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task 7/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Task 7/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task 7/bin/Debug/Task_7.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Task 7/bin/Debug/Task_7.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task 7/bin/Debug/Task_7.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Task 7/bin/Debug/Task_7.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task 7/obj/Debug/Task_7.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Task 7/obj/Debug/Task_7.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task 7/obj/Debug/Task_7.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Task 7/obj/Debug/Task_7.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +57,6 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -172,21 +88,9 @@
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value="" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -199,14 +103,41 @@
       <option name="presentableId" value="Default" />
       <updated>1585832992841</updated>
       <workItem from="1585832994832" duration="11053000" />
+      <workItem from="1590671679679" duration="2034000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state width="1877" height="240" key="GridCell.Tab.0.bottom" timestamp="1585851835662">
       <screen x="0" y="0" width="1920" height="1040" />

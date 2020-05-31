@@ -105,7 +105,6 @@ namespace Task_7
 					nodes.Remove(taken[1]);
 					nodes.Add(parent);
 				}
-
 				Root = nodes.FirstOrDefault();
 			}
 		}
@@ -186,8 +185,8 @@ namespace Task_7
 			Console.WriteLine();
 
 			// Decode
-			//string decoded = huffmanTree.Decode(encoded);
-			//Console.WriteLine("Decoded: " + decoded);
+			string decoded = huffmanTree.Decode(encoded);
+			Console.WriteLine("Decoded: " + decoded);
 		}
 	}
 }

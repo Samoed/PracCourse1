@@ -24,3 +24,4 @@
 
 ## Результаты тестирования
 
+![solved Task1](https://raw.githubusercontent.com/Samoed/PracCourse1/master/Task%201/Task1solve.jpg)

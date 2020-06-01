@@ -6,7 +6,7 @@ namespace Task_6
 {
     internal class Program
     {
-        public static int ReadInt(int left = -100, int right = 100)
+        public static int ReadInt(int left = -10000, int right = 10000)
         {
             bool ok = false;
             int number = 0;
@@ -36,31 +36,43 @@ namespace Task_6
             return number;
         }
 
-        public static int j = 0,a1,a2,a3;
-        
-        static int F(int m, int tmp=0)
-        {
-            if (tmp == 1) return a1;
-            if (tmp == 2) return a2;
-            if (tmp == 3) return a3;
-            /*if (Math.Abs(F(m, tmp + 1)))
-            {
-                
-            }*/
-            return 1;
-        }
         public static void Main(string[] args)
         {
+            List<double> arr = new List<double>();
+            double a1, a2, a3, a;
+            int j = 0;
             Console.WriteLine("Введите а1");
             a1 = ReadInt();
             Console.WriteLine("Введите а2");
             a2 = ReadInt();
             Console.WriteLine("Введите а3");
             a3 = ReadInt();
-            Console.WriteLine("Введите m");
+            Console.WriteLine("Введите M");
             int m = ReadInt();
-            Console.WriteLine("Введите n");
+            Console.WriteLine("Введите N");
             int n = ReadInt();
+            while (Math.Abs(a3 * 3 / 2 - a2 * 2 / 3 - a1 / 3) > m)
+            {
+                a = a3 * 3 / 2.0 - a2 * 2 / 3.0 - a1 / 3.0;
+                a1 = a2;
+                a2 = a3;
+                a3 = a;
+                j++;
+            }
+            Console.WriteLine($"a={a3} J={j}");
+            Console.WriteLine(a3 == m ? "А и М равны" : "А и М не равны");
+            if (j > n)
+            {
+                Console.WriteLine("J больше N");
+            }
+            else if (j < n)
+            {
+                Console.WriteLine("J меньше N");
+            }
+            else
+            {
+                Console.WriteLine("J равно N");
+            }
         }
     }
 }

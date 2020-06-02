@@ -1,5 +1,0 @@
-C:\Users\dell\CoVid-19\PracCourse1\Generaror Task 8\Generaror Task 8\bin\Debug\Generaror_Task_8.exe
-C:\Users\dell\CoVid-19\PracCourse1\Generaror Task 8\Generaror Task 8\bin\Debug\Generaror_Task_8.pdb
-C:\Users\dell\CoVid-19\PracCourse1\Generaror Task 8\Generaror Task 8\obj\Debug\Generaror Task 8.csprojAssemblyReference.cache
-C:\Users\dell\CoVid-19\PracCourse1\Generaror Task 8\Generaror Task 8\obj\Debug\Generaror_Task_8.exe
-C:\Users\dell\CoVid-19\PracCourse1\Generaror Task 8\Generaror Task 8\obj\Debug\Generaror_Task_8.pdb

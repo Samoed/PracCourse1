@@ -165,9 +165,9 @@ namespace Task8Form
             {
                 for (int v=beginning; v!=-1 && k>0;v=p[v],k--)
                     ans+=(v + 1 + " ");
-                ans += "\r\n";
-                for(int i = 0; i < n; ++i)
-                    ans += (p[i]+1).ToString() + " ";
+                //ans += "\r\n";
+                //for(int i = 0; i < n; ++i)
+                //    ans += (p[i]+1).ToString() + " ";
             }
             return ans;
         }

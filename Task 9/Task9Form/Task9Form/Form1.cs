@@ -13,7 +13,7 @@ namespace Task9Form
 {
     public partial class Form1 : Form
     {
-        class MyList
+        public class MyList
         {
             private List<int> arr = new List<int>();
 
@@ -94,7 +94,6 @@ namespace Task9Form
             }
             int find = int.Parse(findText.Text);
             var findres = arr.Find(find);
-            MessageBox.Show(findres.ToString());
             if (findres == -1)
                 MessageBox.Show("Такого элемента нет");
             else

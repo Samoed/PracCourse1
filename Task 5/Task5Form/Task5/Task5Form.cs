@@ -21,21 +21,20 @@ namespace Task5
 
         private void Task5Form_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < matrixPanel.Controls.Count; i++)
+            for (int i = 0; i < 10; ++i)
             {
-                if (!(matrixPanel.Controls[i] is TextBox)) 
-                    continue;
-
-                ((TextBox)matrixPanel.Controls[i]).KeyPress += new KeyPressEventHandler(KeyPress);
+                for (int j = 0; j < 10; ++j)
+                {
+                    TextBox text = new TextBox();
+                    text.KeyPress += new KeyPressEventHandler(KeyPress);
+                    table.Controls.Add(text, i, j);
+                }
             }
-
-            for (int i = 0; i < resultPanel.Controls.Count; i++)
+            for (int i = 0; i < 10; i++)
             {
-                if (!(resultPanel.Controls[i] is TextBox))
-                    continue;
-
-                TextBox text = (TextBox)resultPanel.Controls[i];
-                text.Text = "-";
+                TextBox text = new TextBox();
+                text.ReadOnly = true;
+                resultPanel.Controls.Add(text, 0, i);
             }
         }
 
@@ -47,17 +46,17 @@ namespace Task5
 
         private void rndButton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < matrixPanel.Controls.Count; i++)
-                matrixPanel.Controls[i].Text = rand.Next(100).ToString();
+            for (int i = 0; i < table.Controls.Count; i++)
+                table.Controls[i].Text = rand.Next(100).ToString();
         }
 
         private bool HandleInputs()
         {
             bool ok = true;
             string error = "";
-            for (int i = 0; i < matrixPanel.Controls.Count && ok; i++)
+            for (int i = 0; i < table.Controls.Count && ok; i++)
             {
-                ok = double.TryParse(matrixPanel.Controls[i].Text, out matr[i / 10, i % 10]);
+                ok = double.TryParse(table.Controls[i].Text, out matr[i % 10, i / 10]);
 
                 if (!ok)
                     error = $"Данные в строке {i / 10 + 1}, столбце {i % 10 + 1} введены некорректно";

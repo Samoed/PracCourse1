@@ -16,7 +16,7 @@
 
 ## Описание алгоритма
 
-~~типо тут есть блок-схема~~
+![Блок-схема](https://github.com/Samoed/PracCourse1/blob/master/Task%201/docs/%D0%B1%D0%BB%D0%BE%D0%BA-%D1%81%D1%85%D0%B5%D0%BC%D0%B0.png?raw=true)
 
 ## Описание процесса реализации
 
@@ -24,4 +24,4 @@
 
 ## Результаты тестирования
 
-![solved Task1](https://raw.githubusercontent.com/Samoed/PracCourse1/master/Task%201/Task1solve.jpg)
+![solved Task1](https://github.com/Samoed/PracCourse1/blob/master/Task%201/docs/Task1solve.jpg?raw=true)

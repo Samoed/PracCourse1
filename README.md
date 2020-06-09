@@ -2,6 +2,8 @@
 
 # Tasks
 
+[Формулировки заданий приведены в книге Абрамов С.А., Гнездилова Г.Г., Капустина Е.Н., Селюн М.И. Задачи по программированию. М.: Наука, 1988.](https://github.com/Samoed/PracCourse1/blob/master/Tasks/book95.pdf)
+
 ##  Task 1
 
 [Укладка плиток](https://acmp.ru/index.asp?main=task&id_task=343)

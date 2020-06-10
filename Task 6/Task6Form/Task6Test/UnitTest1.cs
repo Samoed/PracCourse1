@@ -10,9 +10,9 @@ namespace Task6Test
         [TestMethod]
         public void TestMethod1()
         {
-            double q = 300;int w;
-            var a = Form1.Solve(100, 200,ref q, 5, 5,out w);
-            Assert.AreEqual(a, a);
+            double q = 10;int w;
+            var a = Form1.Solve(6, 6,ref q, 5, 5,out w);
+            Assert.AreEqual(a[0], 9);
         }
     }
 }

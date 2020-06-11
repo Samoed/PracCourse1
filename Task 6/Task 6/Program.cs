@@ -35,23 +35,34 @@ namespace Task_6
             } while (!ok);
             return number;
         }
-
+        static List<double> arr;
+        public static void Rec(int index, double m)
+        {
+            double a = arr[index - 1] * 3 / 2 - arr[index - 2] * 2 / 3 - arr[index - 3] / 3;
+            if (a < m) return;
+            arr.Add(a);
+            Rec(index + 1, m);
+        }
         public static void Main(string[] args)
         {
-            List<double> arr = new List<double>();
+            arr = new List<double>();
             double a1, a2, a3, a;
             int j = 0;
             Console.WriteLine("Введите а1");
             a1 = ReadInt();
+            arr.Add(a1);
             Console.WriteLine("Введите а2");
             a2 = ReadInt();
+            arr.Add(a2);
             Console.WriteLine("Введите а3");
             a3 = ReadInt();
+            arr.Add(a3);
             Console.WriteLine("Введите M");
             int m = ReadInt();
             Console.WriteLine("Введите N");
             int n = ReadInt();
-            while (Math.Abs(a3 * 3 / 2 - a2 * 2 / 3 - a1 / 3) > m)
+            Rec(3,m);
+            while ((a3 * 3 / 2 - a2 * 2 / 3 - a1 / 3) > m)
             {
                 a = a3 * 3 / 2.0 - a2 * 2 / 3.0 - a1 / 3.0;
                 a1 = a2;
@@ -59,6 +70,8 @@ namespace Task_6
                 a3 = a;
                 j++;
             }
+            Console.WriteLine(a3.ToString());
+            Console.WriteLine($"arr={arr[arr.Count-1]} ans={a3.ToString()}");
             Console.WriteLine($"a={a3} J={j}");
             Console.WriteLine(a3 == m ? "А и М равны" : "А и М не равны");
             if (j > n)

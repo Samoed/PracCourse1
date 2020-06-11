@@ -12,7 +12,7 @@ namespace Task6Test
         {
             double q = 10;int w;
             var a = Form1.Solve(6, 6,ref q, 5, 5,out w);
-            Assert.AreEqual(a[0], 9);
+            Assert.AreEqual(a[3], 9);
         }
     }
 }

@@ -22,20 +22,33 @@ namespace Task6Form
             if (!Regex.IsMatch(e.KeyChar.ToString(), @"[\d,\-]") && e.KeyChar != 8)
                 e.Handled = true;
         }
+        private static List<double> arr;
+        private static void Rec(int index, double m)
+        {
+            double a = arr[index - 1] * 3 / 2 - arr[index - 2] * 2 / 3 - arr[index - 3] / 3;
+            if (a < m) return;
+            arr.Add(a);
+            Rec(index + 1, m);
+        }
         public static double[] Solve(double a1,double a2,ref double a3, double m, double n,out int j)
         {
-            List<double> arr = new List<double>();
+            arr = new List<double>();
             double a;
             j = 0;
-            while (Math.Abs(a3 * 3 / 2 - a2 * 2 / 3 - a1 / 3) > m)
-            {
-                a = a3 * 3 / 2.0 - a2 * 2 / 3.0 - a1 / 3.0;
-                a1 = a2;
-                a2 = a3;
-                a3 = a;
-                j++;
-                arr.Add(a);
-            }
+            arr.Add(a1);
+            arr.Add(a2);
+            arr.Add(a3);
+            Rec(3, m);
+            j = arr.Count-3;
+            //while (Math.Abs(a3 * 3 / 2 - a2 * 2 / 3 - a1 / 3) > m)
+            //{
+            //    a = a3 * 3 / 2.0 - a2 * 2 / 3.0 - a1 / 3.0;
+            //    a1 = a2;
+            //    a2 = a3;
+            //    a3 = a;
+            //    j++;
+            //    arr.Add(a);
+            //}
             return arr.ToArray();
         }
         private void button_Click(object sender, EventArgs e)
@@ -61,7 +74,7 @@ namespace Task6Form
                     jAns.Text = ($"J равно N");
                 }
                 string str = "";
-                for(int i = 0; i < (ans.Length); ++i)
+                for(int i = 3; i < (ans.Length); ++i)
                 {
                     str += ans[i].ToString() + "\r\n";
                 }

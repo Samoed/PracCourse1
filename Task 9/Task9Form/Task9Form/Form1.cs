@@ -13,43 +13,122 @@ namespace Task9Form
 {
     public partial class Form1 : Form
     {
-        public class MyList
+        public class List
         {
-            private List<int> arr = new List<int>();
+            public class Node
+            {
+                public int Data { get; set; }
+                public Node Next { get; set; }
 
-            public int Size
-            {
-                get => arr.Count;
-            }
-            public MyList(int n)
-            {
-                for (int i = 0; i < n; ++i)
+                public Node(int item)
                 {
-                    arr.Add(i + 1);
+                    Data = item;
+                    Next = null;
                 }
+            }
+
+            public int Length { get; protected set; }
+            private Node head;
+            private Node tail;
+
+            public List()
+            {
+                Length = 0;
+                head = null;
+                tail = null;
+            }
+
+            public List(int size)
+            {
+                head = null;
+                tail = null;
+                for (int i = 0; i <= size; i++)
+                    Add(i);
             }
 
             public int this[int index]
             {
-                get => arr[index];
+                get
+                {
+                    if (index < 0 || index > Length) throw new IndexOutOfRangeException();
+                    return FindNode(index).Next.Data;
+                }
+
+                set
+                {
+                    if (index < 0 || index > Length) throw new IndexOutOfRangeException();
+
+                    Node node = FindNode(index).Next;
+                    node.Data = value;
+                }
             }
 
-            public int Find(int n)
+            public Node FindNode(int index)
             {
-                int ans = -1;
-                for (int i = 0; i < arr.Count; ++i)
+                Node find = head;
+                index--;
+                int ind = 0;
+                while (ind < index)
                 {
-                    if (arr[i] == n)
-                        ans = n;
+                    find = find.Next;
+                    ind++;
                 }
-                return ans;
+                return find;
             }
+            public int Find(int value)
+            {
+                Node find = head;
+                int index = 0;
+                for(int i = 1; i <= Length; ++i)
+                {
+                    if (find.Data == value) return i-2;
+                    find = find.Next;
+                }
+                return -1;
+            }
+            public void Add(int item)
+            {
+                Node node = new Node(item);
+
+                if (head == null) head = node;
+                else tail.Next = node;
+
+                Length++;
+                tail = node;
+            }
+
             public void Remove(int index)
             {
-                arr.Remove(index);
+                if (index < 0) throw new ArgumentOutOfRangeException("Индекс", "Индекс должен быть выражен неотрицательным числом");
+                if (index > Length) throw new ArgumentOutOfRangeException("Индекс", "Индекс должен быть меньше или равно числу элементов в листе");
+
+                if (index == 0) head = head.Next;
+                else
+                {
+                    Node node = FindNode(index);
+                    node.Next = node.Next.Next;
+                }
+
+                Length--;
+            }
+
+            public void Clear()
+            {
+                Node node = head;
+
+                while (node != null)
+                {
+                    Node prev = node;
+                    node = node.Next;
+                    prev.Next = null;
+                }
+
+                head = null;
+                tail = null;
+                Length = 0;
             }
         }
-        private static MyList arr=null;
+        private static List arr=null;
         public Form1()
         {
             InitializeComponent();
@@ -62,7 +141,7 @@ namespace Task9Form
         private void ShowArr()
         {
             string str = "";
-            for(int i = 0; i < arr.Size; ++i)
+            for(int i = 1; i < arr.Length; ++i)
             {
                 str += arr[i].ToString() + " ";
             }
@@ -76,7 +155,7 @@ namespace Task9Form
                 return;
             }
             int n = int.Parse(initText.Text);
-            arr = new MyList(n);
+            arr = new List(n);
             ShowArr();
         }
 
@@ -94,7 +173,7 @@ namespace Task9Form
             }
             int find = int.Parse(findText.Text);
             var findres = arr.Find(find);
-            if (findres == -1)
+            if (findres== -1)
                 MessageBox.Show("Такого элемента нет");
             else
                 MessageBox.Show($"Индекс этого элемента {findres}");

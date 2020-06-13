@@ -36,7 +36,7 @@ public class Programm
         l = r;
         r = tmp;
     }
-    static int[] CoctailSort(int[] arr)
+    public static int[] CoctailSort(int[] arr)
     {
         int l = 0, r = arr.Length;
         while (l<r)

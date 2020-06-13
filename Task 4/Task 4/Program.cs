@@ -2,7 +2,7 @@
 
 namespace Task_4
 {
-    internal class Program
+    public class Program
     {
         public static double ReadD(int left = -100, int right = 100)
         {
@@ -38,19 +38,24 @@ namespace Task_4
         {
             return x + Math.Log(x + 0.5) - 0.5;
         }
+        public static double Solve(double eps)
+        {
+            double l = 0, r = 2;
+            while (F(l) + eps < F(r))
+            {
+                double mid = (l + r) / 2;
+                if (F(mid) < 0)
+                    l = mid;
+                else r = mid;
+                //Console.WriteLine(F(mid));
+            }
+            return r;
+        }
         public static void Main(string[] args)
         {
             double eps = ReadD();
-            double l = 0, r = 2;
-            while (F(l)+eps<F(r)){
-                double mid = (l+r)/2;
-                if (F(mid)<0)
-                    l=mid;
-                else r = mid;
-                Console.WriteLine(F(mid));
-            }
-            Console.WriteLine(l+" "+F(l));
-            Console.WriteLine(r+" "+F(r));
+            var ans = Solve(eps);
+            Console.WriteLine(ans);
         }
     }
 }

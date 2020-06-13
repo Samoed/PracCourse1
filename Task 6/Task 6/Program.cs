@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 
 namespace Task_6
 {
-    internal class Program
+    public class Program
     {
         public static int ReadInt(int left = -10000, int right = 10000)
         {
@@ -35,13 +35,25 @@ namespace Task_6
             } while (!ok);
             return number;
         }
-        static List<double> arr;
-        public static void Rec(int index, double m)
+        public static List<double> arr;
+        private static void Rec(int index, double m)
         {
             double a = arr[index - 1] * 3 / 2 - arr[index - 2] * 2 / 3 - arr[index - 3] / 3;
             if (a < m) return;
             arr.Add(a);
             Rec(index + 1, m);
+        }
+        public static double[] Solve(double a1, double a2, double a3, double m, double n, out int j)
+        {
+            arr = new List<double>();
+            double a;
+            j = 0;
+            arr.Add(a1);
+            arr.Add(a2);
+            arr.Add(a3);
+            Rec(3, m);
+            j = arr.Count - 3;
+            return arr.ToArray();
         }
         public static void Main(string[] args)
         {
@@ -61,19 +73,9 @@ namespace Task_6
             int m = ReadInt();
             Console.WriteLine("Введите N");
             int n = ReadInt();
-            Rec(3,m);
-            while ((a3 * 3 / 2 - a2 * 2 / 3 - a1 / 3) > m)
-            {
-                a = a3 * 3 / 2.0 - a2 * 2 / 3.0 - a1 / 3.0;
-                a1 = a2;
-                a2 = a3;
-                a3 = a;
-                j++;
-            }
-            Console.WriteLine(a3.ToString());
-            Console.WriteLine($"arr={arr[arr.Count-1]} ans={a3.ToString()}");
-            Console.WriteLine($"a={a3} J={j}");
-            Console.WriteLine(a3 == m ? "А и М равны" : "А и М не равны");
+            Solve(a1, a2, a3, m, n,out j);
+            Console.WriteLine($"a={arr[arr.Count - 1]} J={j}");
+            Console.WriteLine(arr[arr.Count - 1] == m ? "А и М равны" : "А и М не равны");
             if (j > n)
             {
                 Console.WriteLine("J больше N");

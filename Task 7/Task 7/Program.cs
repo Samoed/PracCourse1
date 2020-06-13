@@ -5,82 +5,71 @@ using System.Linq;
 
 namespace Task_7
 {
-	public class Node
+	public class HuffmanTree
 	{
-		public char Symbol { get; set; }
-		public int Frequency { get; set; }
-		public Node Right { get; set; }
-		public Node Left { get; set; }
-
-		// Find the encoded code for a symbol from the current node
-		public List<bool> Traverse(char symbol, List<bool> data)
+		public class Node
 		{
-			// Leaf
-			if (Right == null && Left == null)
+			public char Symbol { get; set; }
+			public int Frequency { get; set; }
+			public Node Right { get; set; }
+			public Node Left { get; set; }
+
+			// Find the encoded code for a symbol from the current node
+			public List<bool> Traverse(char symbol, List<bool> data)
 			{
-				if (symbol.Equals(Symbol))
+				// Leaf
+				if (Right == null && Left == null)
 				{
-					return data;
-				}
-				return null;
-			}
-			else
-			{
-				List<bool> left = null;
-				List<bool> right = null;
-
-				if (Left != null)
-				{
-					List<bool> leftPathData = new List<bool>();
-					leftPathData.AddRange(data);
-					leftPathData.Add(false);
-
-					left = Left.Traverse(symbol, leftPathData);
-				}
-
-				if (Right != null)
-				{
-					List<bool> rightPathData = new List<bool>();
-					rightPathData.AddRange(data);
-					rightPathData.Add(true);
-					right = Right.Traverse(symbol, rightPathData);
-				}
-				if (left != null)
-				{
-					return left;
+					if (symbol.Equals(Symbol))
+					{
+						return data;
+					}
+					return null;
 				}
 				else
 				{
-					return right;
+					List<bool> left = null;
+					List<bool> right = null;
+
+					if (Left != null)
+					{
+						List<bool> leftPathData = new List<bool>();
+						leftPathData.AddRange(data);
+						leftPathData.Add(false);
+
+						left = Left.Traverse(symbol, leftPathData);
+					}
+
+					if (Right != null)
+					{
+						List<bool> rightPathData = new List<bool>();
+						rightPathData.AddRange(data);
+						rightPathData.Add(true);
+						right = Right.Traverse(symbol, rightPathData);
+					}
+					if (left != null)
+					{
+						return left;
+					}
+					else
+					{
+						return right;
+					}
 				}
 			}
 		}
-	}
-
-	public class HuffmanTree
-	{
 		private List<Node> nodes = new List<Node>();
 		public Node Root { get; set; }
 		public Dictionary<char, int> SymbolFrequencies = new Dictionary<char, int>();
-
-		public void BuildHuffmanTree(string source)
+		private int[] frequancies = new int[0];
+		public void BuildHuffmanTree(int[] source)
 		{
-			for (int i = 0; i < source.Length; i++)
+			frequancies = source;
+			for (int i = 0; i < frequancies.Length; ++i)
 			{
-				if (!SymbolFrequencies.ContainsKey(source[i]))
-				{
-					SymbolFrequencies.Add(source[i], 0);
-				}
-
-				SymbolFrequencies[source[i]]++;
+				SymbolFrequencies.Add((char)i, frequancies[i]);
+				nodes.Add(new Node { Symbol = (char)i, Frequency = frequancies[i] });
 			}
-
-			// Step# 1: Create list of nodes with symbol and frequencies
-			foreach (KeyValuePair<char, int> symbol in SymbolFrequencies)
-			{
-				nodes.Add(new Node{Symbol = symbol.Key, Frequency = symbol.Value});
-			}
-
 			// Generate root nodes for the lowest frequencies and add it to the end of ordered nodes till only 1 node is left as main root of the complete huffman tree
 			while (nodes.Count >= 2)
 			{
@@ -108,8 +97,7 @@ namespace Task_7
 				Root = nodes.FirstOrDefault();
 			}
 		}
-
-		public Dictionary<char,string> Encode()
+		public Dictionary<char, string> Encode()
 		{
 			Dictionary<char, string> encode = new Dictionary<char, string>();
 			List<bool> encodedSource = new List<bool>();
@@ -119,74 +107,70 @@ namespace Task_7
 				encodedSource.AddRange(encodedSymbol);
 				string str = "";
 				foreach (bool bit in new BitArray(encodedSymbol.ToArray()))
-					str+=bit ? "1" : "0";
+					str += bit ? "1" : "0";
 				string ans = "";
 				for (int i = str.Length - 1; i >= 0; --i)
 					ans += str[i];
-				encode.Add(tmp.Key,ans);
+				encode.Add(tmp.Key, ans);
 			}
-
-			BitArray bits = new BitArray(encodedSource.ToArray());
 			return encode;
 		}
-
-		public string Decode(BitArray bits)
-		{
-			Node current = Root;
-			string decoded = "";
-			foreach (bool bit in bits)
-			{
-				if (bit)
-				{
-					if (current.Right != null)
-					{
-						current = current.Right;
-					}
-				}
-				else
-				{
-					if (current.Left != null)
-					{
-						current = current.Left;
-					}
-				}
-				// Every leaf node is a symbol so once you reach there then add it to decoded and then reset the current to the root of huffman tree
-				if (IsLeaf(current))
-				{
-					decoded += current.Symbol;
-					current = Root;
-				}
-			}
-			return decoded;
-		}
-
-		public bool IsLeaf(Node node)
-		{
-			return node.Left == null && node.Right == null;
-		}
 	}
-
-	internal class Program
+	public class Program
 	{
+		public static int ReadInt(int left = -10000, int right = 10000)
+		{
+			bool ok = false;
+			int number = 0;
+			do
+			{
+				try
+				{
+					number = int.Parse(Console.ReadLine());
+					if (number >= left && number <= right) ok = true;
+					else
+					{
+						Console.WriteLine($"Ошибка. Число выход за границы. Введите число большее {left} и меньшее {right}");
+						ok = false;
+					}
+				}
+				catch (FormatException)
+				{
+					Console.WriteLine("Ошибка. Введено не целое число. Введите целое число.");
+					ok = false;
+				}
+				catch (OverflowException)
+				{
+					Console.WriteLine($"Ошибка. Число выход за границы. Введите число большее {left} и меньшее {right}");
+					ok = false;
+				}
+			} while (!ok);
+			return number;
+		}
+
+		private static int size = 0;
+		public static int[] frequency = null;
+		
+		public static Dictionary<char, string> Solve(int[] frequency)
+		{
+			HuffmanTree tree = new HuffmanTree();
+			tree.BuildHuffmanTree(frequency);
+			var dict = tree.Encode();
+			return dict;
+		}
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("Введите строку");
-			string input = Console.ReadLine();
-			HuffmanTree huffmanTree = new HuffmanTree();
-			huffmanTree.BuildHuffmanTree(input);
-
-			// Encode
-			var encoded = huffmanTree.Encode();
-			foreach (var tmp in encoded)
+			Console.WriteLine("Введите количество символов");
+			int n = ReadInt(0);
+			frequency = new int[n];
+			for (int i = 0; i < n; ++i)
 			{
-				Console.Write($"Символ {tmp.Key} код {tmp.Value}\n");
+				Console.WriteLine($"Введите частоту {i+1} символа");
+				frequency[i] = ReadInt(0);
 			}
-
-			Console.WriteLine();
-
-			// Decode
-			string decoded = huffmanTree.Decode(encoded);
-			Console.WriteLine("Decoded: " + decoded);
+			var dict = Solve(frequency);
+			foreach (var tmp in dict)
+				Console.WriteLine(tmp.Value);
 		}
 	}
 }

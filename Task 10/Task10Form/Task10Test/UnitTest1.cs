@@ -12,9 +12,10 @@ namespace Task10Test
         public void TestMethod1()
         {
             int n = 5;
-            List<int> arr = new List<int>{ 1, 2, 3, 4, 5 };
-            List<int> actual = Form1.Solve(n, arr);
+            List arr = new List(new double[] { 1, 2, 3, 4, 5 });
+            List actual = Form1.Solve(n, arr);
             var expected = new List<int> { -4, -3, -2, -1 };
+            Assert.AreEqual(expected, actual);
         }
     }
 }

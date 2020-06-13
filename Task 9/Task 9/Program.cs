@@ -4,40 +4,119 @@ using System.IO;
 
 namespace Task_9
 {
-    class MyList
+    public class List
     {
-        private List<int> arr=new List<int>();
+        public class Node
+        {
+            public int Data { get; set; }
+            public Node Next { get; set; }
 
-        public int Size
-        {
-            get => arr.Count;
-        }
-        public MyList(int n)
-        {
-            for (int i = 0; i < n; ++i)
+            public Node(int item)
             {
-                arr.Add(i + 1);
+                Data = item;
+                Next = null;
             }
+        }
+
+        public int Length { get; protected set; }
+        private Node head;
+        private Node tail;
+
+        public List()
+        {
+            Length = 0;
+            head = null;
+            tail = null;
+        }
+
+        public List(int size)
+        {
+            head = null;
+            tail = null;
+            for (int i = 0; i <= size; i++)
+                Add(i);
         }
 
         public int this[int index]
         {
-            get=>arr[index];
+            get
+            {
+                if (index < 0 || index > Length) throw new IndexOutOfRangeException();
+                return FindNode(index).Next.Data;
+            }
+
+            set
+            {
+                if (index < 0 || index > Length) throw new IndexOutOfRangeException();
+
+                Node node = FindNode(index).Next;
+                node.Data = value;
+            }
         }
 
-        public int Find(int n)
+        public Node FindNode(int index)
         {
-            int ans = -1;
-            for (int i = 0; i < n; ++i)
+            Node find = head;
+            index--;
+            int ind = 0;
+            while (ind < index)
             {
-                if (arr[i] == n)
-                    ans = n;
+                find = find.Next;
+                ind++;
             }
-            return ans;
+            return find;
         }
+        public int Find(int value)
+        {
+            Node find = head;
+            int index = 0;
+            for (int i = 1; i <= Length; ++i)
+            {
+                if (find.Data == value) return i - 2;
+                find = find.Next;
+            }
+            return -1;
+        }
+        public void Add(int item)
+        {
+            Node node = new Node(item);
+
+            if (head == null) head = node;
+            else tail.Next = node;
+
+            Length++;
+            tail = node;
+        }
+
         public void Remove(int index)
         {
-            arr.Remove(index);
+            //if (index < 0) throw new ArgumentOutOfRangeException("Индекс", "Индекс должен быть выражен неотрицательным числом");
+            //if (index > Length) throw new ArgumentOutOfRangeException("Индекс", "Индекс должен быть меньше или равно числу элементов в листе");
+
+            if (index == 0) head = head.Next;
+            else
+            {
+                Node node = FindNode(index);
+                node.Next = node.Next.Next;
+            }
+
+            Length--;
+        }
+
+        public void Clear()
+        {
+            Node node = head;
+
+            while (node != null)
+            {
+                Node prev = node;
+                node = node.Next;
+                prev.Next = null;
+            }
+
+            head = null;
+            tail = null;
+            Length = 0;
         }
     }
 
@@ -75,8 +154,8 @@ namespace Task_9
         public static void Main(string[] args)
         {
             int n = ReadInt(0);
-            MyList arr = new MyList(n);
-            for (int i=0;i<n;++i)
+            List arr = new List(n+1);
+            for (int i=1;i<n+1;++i)
             {
                 Console.Write(arr[i]+" ");
             }
@@ -84,7 +163,7 @@ namespace Task_9
             int search = arr.Find(4);
             Console.WriteLine(search);
             arr.Remove(4);
-            for (int i=0;i<arr.Size;++i)
+            for (int i=1;i<arr.Length;++i)
             {
                 Console.Write(arr[i]+" ");
             }

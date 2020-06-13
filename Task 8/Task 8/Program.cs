@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace Task_8
 {
-	internal class Program
+	public class Program
 	{
 		static public int n;
 		static public List<List<int>> g = new List<List<int>>();
 		static public char[] cl;
 		static public int[] p;
-		static int cycle_st, cycle_end;
+		static public int cycle_st, cycle_end;
 
 		static bool dfs(int v)
 		{
@@ -32,7 +32,29 @@ namespace Task_8
 			cl[v] = '2';
 			return false;
 		}
-
+		public static void Solve(int n,int k)
+		{
+			p = new int[n];
+			cl = new char[n];
+			for (int i = 0; i < n; ++i)
+			{
+				cycle_st = -1;
+				for (int j = 0; j < n; ++j)
+				{
+					p[j] = -1;
+					cl[j] = '0';
+				}
+				if (dfs(i))
+				{
+					int w = 0;
+					for (int j = 0; j < n; ++j)
+					{
+						if (p[j] != -1) w++;
+					}
+					if (w == k - 1) break;
+				}
+			}
+		}
 		public static void Main(string[] args)
 		{
 			n = int.Parse(Console.ReadLine());
@@ -55,27 +77,7 @@ namespace Task_8
 					}
 				}
 			}
-			p = new int[n];
-			cl = new char[n];
-			for (int i = 0; i < n; ++i)
-			{
-				cycle_st = -1;
-				for (int j = 0; j < n; ++j)
-				{
-					p[j] = -1;
-					cl[j] = '0';
-				}
-				if (dfs(i))
-				{
-					int w = 0;
-					for (int j = 0; j < n; ++j)
-					{
-						if (p[j] != -1) w++;
-					}
-					if (w==k-1) break;
-				}
-			}
-
+			Solve(n, k);
 			if (cycle_st == -1)
 				Console.WriteLine("Цикла такой длины нет");
 			else

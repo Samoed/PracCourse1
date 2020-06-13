@@ -139,16 +139,6 @@ namespace Task8Form
                 }
                 dfs(i);
                 beginning = i;
-                //int count = 0;
-                //for(int q = 0; q < n; ++q)
-                //{
-                //    if (p[q] != -1) count++;
-                //}
-                //if (count >= k-1)
-                //{
-                //    ok = true;
-                //    break;
-                //}
                 var tmp = k;
                 for (int v = beginning; v != -1 && tmp > 0; v = p[v], tmp--)
                     ansPoint.Add(v);
@@ -165,9 +155,6 @@ namespace Task8Form
             {
                 for (int v=beginning; v!=-1 && k>0;v=p[v],k--)
                     ans+=(v + 1 + " ");
-                //ans += "\r\n";
-                //for(int i = 0; i < n; ++i)
-                //    ans += (p[i]+1).ToString() + " ";
             }
             return ans;
         }
